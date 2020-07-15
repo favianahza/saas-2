@@ -1,0 +1,198 @@
+/* Custom Background Color */
+.bg-black {
+  background-color: #182628 !important;
+}
+
+.bg-mute {
+  background: #f8f9fa !important;
+}
+
+
+.bg-lgreen {
+  background-color: #65ccb8 !important;
+}
+
+.bg-mgreen {
+  background-color: #57ba98 !important;
+}
+
+.bg-dgreen {
+  background-color: #3b945e !important;
+}
+
+.bg-silver {
+  background-color: #f2f2f2 !important;
+}
+
+.bg-lsilver {
+  background-color: #f7f9fb !important;
+}
+
+.bg-olive {
+  background-color: #687864 !important;
+}
+
+.bg-dblue {
+  background-color: #31708e !important;
+}
+
+.bg-mblue {
+  background-color: #5085a5 !important;
+}
+
+.bg-lblue {
+  background-color: #8fc1e3 !important;
+}
+
+/* Gradient Background */
+
+.gd-green {
+  background-image: linear-gradient(47deg, #15db95, #65ccb8,#5085a5 ); 
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Custom Color */
+
+.c-black {
+  color: #182628 !important;
+}
+
+.c-lgreen {
+  color: #65ccb8 !important;
+}
+
+.c-mgreen {
+  color: #57ba98 !important;
+}
+
+.c-dgreen {
+  color: #3b945e !important;
+}
+
+.c-silver {
+  color: #f2f2f2 !important;
+}
+
+.c-lsilver {
+  color: #f7f9fb !important;
+}
+
+.c-olive {
+  color: #687864 !important;
+}
+
+.c-dblue {
+  color: #31708e !important;
+}
+
+.c-mblue {
+  color: #5085a5 !important;
+}
+
+.c-lblue {
+  color: #8fc1e3 !important;
+}
+
+/* Custom Border */
+.br-dmute {
+  border: 1px solid #ced4da !important;
+}
+
+/* Font Family */
+
+.f-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.f-lobster {
+    font-family: 'Lobster', cursive;
+}
+
+
+.f-lato {
+    font-family: 'Lato', sans-serif; 
+}
+
+
+/* Button Custom */
+.btn-gblue {
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%) !important;
+  border: none;
+}
+
+.btn-ggreen {
+background: rgb(36,246,127);
+background: radial-gradient(circle, rgba(36,246,127,1) 4%, rgba(26,227,113,1) 86%);
+  border: none;
+} 
+
+.btn-gpink {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%) !important;
+  border: none;
+}
+
+.btn-gyellow {
+  background: rgb(255,189,0) !important;
+  background: radial-gradient(circle, rgba(252,205,70,1) 4%, rgba(255,189,0,1) 88%) !important;
+  border: none;
+}
+
+
+/* FONT SIZE RESPONSIVE */
+
+@media (max-width: 1200px) {
+  legend {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  h1,
+  .h1 {
+    font-size: calc(1.375rem + 1.3vw);
+  }
+  h2,
+  .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  h3,
+  .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  h4,
+  .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .display-1 {
+    font-size: calc(1.725rem + 5.7vw);
+  }
+  .display-2 {
+    font-size: calc(1.675rem + 5.1vw);
+  }
+  .display-3 {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+  }
+  .close {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+
+  /* Custom Burger Icon */
+.navbar-light .navbar-toggler {
+    border-color: #f7f9fb !important;
+}
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,180,0, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  
+}
+
+
+/* IMPORTANT */
+
+/* Navbar Button*/
+
+nav button a {
+  
+}

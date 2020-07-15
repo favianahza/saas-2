@@ -1,0 +1,91 @@
+6. Sistem pengumpulan laporan kelas 4 siswa SMKN1Cimahi
+User : 
+Siswa
+	Mengumpulkan laporan (upload) laporan + judul laporan. 
+	Menulis Tempat PKL, Lama PKL, Pembimbing Perusahaan
+	Mengumpulkan absensi PKL
+	Mengumpulkan agenda PKL'
+	Mengumpulkan nilai PKL
+	Mengmpulkan sertifikat PKL
+Pembimbing Sekolah
+	Melihat laporan (dokumen PKL lainnyaa) yang sudah dikumpulkan oleh siswa yang dibimbingnya
+	Menyetujui seluruh yang diisi oleh siswa sesuai dengan daftar pembimbing
+Kepala Bengkel
+	Mencatat, mengedit daftar pembimbing tiap siswa
+	Melihat laporan (dokumen PKL lainnya) yang sudah dikumpulkan oleh siswa
+
+
+
+
+
+Mendapatkan banyaknya siswa yang dibimbing oleh pembimbing (DATA_SISWA)
+SELECT *, (SELECT count(id_pembimbing) FROM siswa WHERE siswa.id_pembimbing = pembimbing.id_pembimbing ) AS jml_siswa FROM pembimbing;
+
+
+Mendapatkan nama pembimbing berdasarkan id_pembimbing (DATA_PEMBIMBING)
+SELECT *, (SELECT pembimbing.nama FROM pembimbing WHERE siswa.id_pembimbing = pembimbing.id_pembimbing) pembimbing FROM siswa;
+
+
+Mendapatkan NIS, nama siswa dari tabel siswa (FILE_SISWA)
+SELECT *, (SELECT NIS FROM siswa JOIN file_siswa USING(id_siswa) ) AS NIS, (SELECT nama FROM siswa JOIN file_siswa USING(id_siswa) ) AS nama, (SELECT jurusan FROM siswa JOIN file_siswa USING(id_siswa)) AS jurusan FROM file_siswa HAVING jurusan = ?;
+
+
+
+////////////////// OBSOLETE
+SELECT *, (SELECT NIS FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS NIS, (SELECT nama FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS nama, (SELECT jurusan FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS jurusan FROM file_siswa HAVING jurusan = ?;
+
+
+
+Mengambil data dari tabel siswa yang memiliki id_pembimbing yang sama + mengkonversi id_pembimbing menjadi nama 
+pembimbing (DATA_SISWA_PEMBIMBING) 
+SELECT *, (SELECT pembimbing.nama FROM pembimbing WHERE siswa.id_pembimbing = pembimbing.id_pembimbing) pembimbing FROM siswa WHERE id_pembimbing = ?
+
+
+
+////////////////// OBSOLETE
+SELECT *, (SELECT pembimbing.nama FROM pembimbing WHERE siswa.id_pembimbing = pembimbing.id_pembimbing) pembimbing FROM siswa JOIN pembimbing USING(id_pembimbing) WHERE id_pembimbing = ? AND siswa.jurusan = ?;
+
+
+
+
+Mengambil nama file untuk Dashboard Pembimbing
+SELECT *, (SELECT NIS FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS NIS, (SELECT nama FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS nama, (SELECT jurusan FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa ) AS jurusan, (SELECT id_pembimbing FROM siswa WHERE file_siswa.id_siswa = siswa.id_siswa) AS id_pem FROM file_siswa HAVING jurusan = 'SIJA' AND id_pem = 3;
+
+
+
+
+
+////////////////// CHECK IF NULL
+( SELECT ( IF(judul_laporan IS NULL, 1, 0) + IF(file_laporan IS NULL, 1, 0) + IF(absensi_pkl IS NULL, 1, 0) + IF(agenda_pkl IS NULL, 1, 0) + IF(nilai_pkl IS NULL, 1, 0) + IF(sertifikat_pkl IS NULL, 1, 0) ) FROM file_siswa WHERE id_siswa= siswa.id_siswa) AS nv;
+
+
+
+BASE URL IN JS
+AT kabeng view data_siswa.php LINE 85;
+
+PAGINATION 5 PER PAGE
+		if( data % 2 == 1 ){
+			p = ((data * 5)/2) + 2.5;
+		} else {
+			p = ((data*5)/2);
+		}
+
+PAGINATION 10 PER PAGE
+		if( data % 2 == 1 ){
+			p = (data * 5) + 5;
+		} else {
+			p = (data * 5);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+localhost/phpmyadmin/sql.php?server=1&db=saas_2&table=siswa&pos=0

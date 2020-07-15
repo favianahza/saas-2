@@ -1,0 +1,72 @@
+
+/* ANIMATION */
+
+@keyframes floatContainer {
+	from{
+		transform: translate(0px, -10px);
+	}
+
+	to{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
+}
+
+body {
+	 overflow-x: hidden !important;
+}
+/* FORM CONTAINER */
+.form-control::-webkit-input-placeholder { color: silver; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: silver; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: silver; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: silver; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: silver; }  /* Microsoft Edge */
+
+#formContainer {
+	border: 1px solid white;
+	box-shadow: 0px 1px 10px 5px rgba(18,18,18,.1);
+	animation: floatContainer .7s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	margin-top: 7.5vw !important;
+}
+
+.berhasil {
+	border-color: rgba(53, 220, 69, 0.8);
+  	box-shadow: 0 0 8px rgba(53, 220, 69, .6);
+  	outline: 0;
+}
+
+.gagal {
+	border-color: rgba(220, 53, 69, 0.8);
+  	box-shadow: 0 0 8px rgba(220, 53, 69, .6);
+  	outline: 0;
+}
+
+/* SIGN UP BUTTON */
+#button {
+	border-radius: 24px;
+	background-color: #5085a5 !important;
+	color : white !important;
+	box-shadow: 0px 0px 2px rgba(181,181,181,.6);
+}
+
+#button:hover {
+	background-color: #31708e !important;
+	color : white !important;
+}
+
+#e1 a:active {
+	background-image: linear-gradient(47deg, #15db95, #65ccb8,#5085a5 ); 
+  	background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+#e2 a:active {
+	background-image: linear-gradient(47deg, #15db95, #65ccb8,#5085a5 ); 
+  	background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .4s;
+}

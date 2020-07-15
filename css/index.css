@@ -1,0 +1,129 @@
+/* ANIMATION */
+body {
+	 overflow-x: hidden !important;
+}
+
+#parallax h1 {
+  position: absolute;
+  left:50%;
+  top:50%;
+  z-index: 2;
+}
+
+
+@keyframes floatUp {
+	0% {
+		opacity: 0;
+		transform: translate(0, 10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes floatDown {
+	0% {
+		opacity: 0;
+		transform: translate(0, -10px);	
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0px);		
+	}
+
+}
+
+.smooth {
+	transform: translate(0px, -100px);
+	transition: .8s;
+}
+
+/* NAVIGATION */
+nav.navbar div.container-fluid {
+	opacity: 0;
+}
+
+/* TEXT AND SIGN UP PARENT */
+#top-text {
+	animation: floatUp 1s;
+	text-shadow: 0px 0px 2px rgba(12,12,12,.5);
+}
+
+/* SIGN UP BUTTON */
+#signUp {
+	border-radius: 28px;
+	cursor: pointer;
+	box-shadow: 0px 0px 4px rgba(1,1,1,.2);
+	transition: .5s;
+	text-shadow: 0px 0px 2px rgba(15,15,15,.2);
+}
+
+#signUp a {
+	text-decoration: none;
+	transition: .5s;
+}
+
+#signUp:hover{
+	color: #f7f9fb;
+	background-color: #5085a5 !important;
+	box-shadow: 0px 0px 4px rgba(1,1,1,.1);
+	transition: .5s;
+}
+
+/* ICON */
+
+	#icon {
+	        animation: floatUp 1s;
+    }
+
+@media (min-width: 576px) {
+	#book {
+        width: 45%;
+        box-shadow: 0px  0px 5px rgba(20,20,20,.4);
+    }
+}
+
+@media (min-width: 768px) {
+    #book {
+        width: 85%;
+        box-shadow: 0px  0px 5px rgba(20,20,20,.4);
+    }
+}
+/* md */
+@media (min-width: 992px) {
+    #book {
+        width: 85%;
+        box-shadow: 0px  0px 5px rgba(20,20,20,.4);
+    }
+}
+/* lg */
+@media (min-width: 1200px) {
+    #book {
+        width: 65%;
+        box-shadow: 0px  0px 5px rgba(20,20,20,.4);
+    }
+}
+
+
+/* MID-TEXT */
+div.mid-text {
+	opacity: 0;
+}
+
+
+#e1 a:active {
+	background-image: linear-gradient(47deg, #15db95, #65ccb8,#5085a5 ); 
+  	background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+#e2 a:active {
+	background-image: linear-gradient(47deg, #15db95, #65ccb8,#5085a5 ); 
+  	background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .4s;
+}
